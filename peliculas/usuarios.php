@@ -21,10 +21,13 @@ switch ($_GET['operacion']) {
         break;
         
     case "borrar":
+        $consulta1="DELETE FROM comentario
+    WHERE idUsuario = ". $_GET["idusuario"];
+    $lnk->query($consulta1);
+    
         $consulta ="DELETE FROM usuario
         WHERE idUsuario = ". $_GET["idusuario"];
         $lnk->query($consulta);
-        echo "entra borrar";
         require_once("listaru.php");
         
         break;
