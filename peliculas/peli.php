@@ -60,6 +60,9 @@ switch ($_POST['operacion']) {
         
     case "borrar":
     
+      $consulta1 ="DELETE FROM comentario
+    WHERE idPelicula = ". $_POST["idpelicula"];
+     $lnk->query($consulta1);
         $consulta ="DELETE FROM pelicula
         WHERE idPelicula = ". $_POST["idpelicula"];
         $lnk->query($consulta);
