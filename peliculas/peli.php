@@ -68,8 +68,7 @@ switch ($_POST['operacion']) {
         break;
 
     case "nuevo":
-     $archivo =  $_FILES['afile'];
-    if ($_FILES['afile']['error']==0) {
+    if(isset($_FILES['afile'])){
         // Donde se va a guardar el fichero (la imagen)
         $nombreTemporal = $_FILES['afile']['tmp_name'];
         $cadena = "abcdefghijklmnopqrstuwwxyzABCDEFGHIJKLMNOPQVWXYZ1234567";
